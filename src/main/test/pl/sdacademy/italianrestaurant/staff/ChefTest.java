@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.runners.MockitoJUnitRunner;
 import pl.sdacademy.italianrestaurant.food.FoodFactory;
 import pl.sdacademy.italianrestaurant.supply.Order;
@@ -17,13 +18,20 @@ import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.*;
 
-@RunWith(MockitoJUnitRunner.class)
 public class ChefTest {
 
     @Mock
     private FoodFactory factory;
+    @Mock
+    private Kitchen kitchen;
     @InjectMocks
     private Chef ramsey;
+
+    @Before
+    public void init() {
+        ramsey = new Chef(kitchen, "Gordon");
+        MockitoAnnotations.initMocks(this);
+    }
 
     @Test
     public void shouldUseFoodFactory() {
