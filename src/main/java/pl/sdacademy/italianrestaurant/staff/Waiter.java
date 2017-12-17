@@ -1,10 +1,7 @@
 package pl.sdacademy.italianrestaurant.staff;
 
 import com.sun.deploy.util.OrderedHashSet;
-import pl.sdacademy.italianrestaurant.food.Dough;
-import pl.sdacademy.italianrestaurant.food.Food;
-import pl.sdacademy.italianrestaurant.food.Pizza;
-import pl.sdacademy.italianrestaurant.food.Size;
+import pl.sdacademy.italianrestaurant.food.*;
 import pl.sdacademy.italianrestaurant.supply.Order;
 import pl.sdacademy.italianrestaurant.supply.OrderElement;
 
