@@ -14,10 +14,13 @@ public class OrderElement {
         this.specifics = new HashMap<>();
     }
 
-    public void addSpecifics(String type, String specific){
+    public void addSpecifics(String type, String specific) {
         Set<String> collectionOfSpecificsForType = new HashSet<>();
         collectionOfSpecificsForType.add(specific);
-        specifics.merge(type, collectionOfSpecificsForType, (oldSpecifics, newSpecifics) -> {oldSpecifics.addAll(newSpecifics); return oldSpecifics;});
+        specifics.merge(type, collectionOfSpecificsForType, (oldSpecifics, newSpecifics) -> {
+            oldSpecifics.addAll(newSpecifics);
+            return oldSpecifics;
+        });
     }
 
     public String getElementType() {

@@ -7,12 +7,12 @@ import java.util.Set;
 public class FoodFactory {
     public Food prepareFood(OrderElement orderElement) {
         switch (orderElement.getElementType()) {
-            case "pizza" :
+            case "pizza":
                 if (isValidForPizza(orderElement)) {
                     return producePizza(orderElement);
                 }
                 break;
-            case "pasta" :
+            case "pasta":
                 if (isValidForPasta(orderElement)) {
                     return producePasta(orderElement);
                 }

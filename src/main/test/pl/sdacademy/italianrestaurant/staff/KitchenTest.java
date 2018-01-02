@@ -28,7 +28,7 @@ public class KitchenTest {
         //then
         verify(foodObserver).update();
     }
-    
+
     @Test
     public void shouldUpdateAllFoodObservesWhenNewFoodAppears() {
         //given
